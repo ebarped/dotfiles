@@ -1,0 +1,36 @@
+# kube-bash prompt
+KUBE_PS1_SYMBOL_ENABLE="false"
+source ~/.kube-ps1/kube-ps1.sh
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(kube_ps1)\n\[\e[35m\]>\[\e[0m\] '
+
+# git-bash prompt
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    GIT_PROMPT_END="$(kube_ps1)\n\e[0;35m>\e[m "
+        source $HOME/.bash-git-prompt/gitprompt.sh
+fi
+
+export PATH=$PATH:/usr/local/go/bin
+export PATH=/usr/local/bin:$PATH
+export PATH=~/.kubectx::$PATH
+
+source <(kubectl completion bash)
+source <(kind completion bash)
+source <(kops completion bash)
+source <(helm completion bash)
+complete -C '/usr/local/bin/aws_completer' aws
+
+alias ls='lsd --icon never'
+alias ns='kubens'
+alias ctx='kkubectx'
+alias pods='kubectl get pods'
+alias logs='kubectl --plain logs'
+alias exec='kubectl exec -it'
+alias kubectl='kkubecolor'
+alias goformat='gofumpt -l -w .'
+alias refresh='source ~/.bashrc'
+alias kubeshell='kubectl run kubeshell --image arunvelsriram/utils -- sleep 99999'
+alias k='kubectl'
+alias gitsu='gitsu --global'
+alias ssh='ssh -o ServerAliveInterval=60'
+export EDITOR=vim

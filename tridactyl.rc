@@ -1,0 +1,4 @@
+" " This file will be referenced by 
+
+" Enable default search behaviour of firefox
+unbind <C-f> dejar el ctrl+f normal de firefox

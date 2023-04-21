@@ -1,4 +1,7 @@
 " " This file will be referenced by 
 
+" select color theme
+colors midnight
+
 " Enable default search behaviour of firefox
 unbind <C-f> dejar el ctrl+f normal de firefox

@@ -34,6 +34,7 @@ alias bat='batcat --paging=never -p'
 alias ssh='ssh -o ServerAliveInterval=60'
 alias viddy='viddy --pty --shell fish'
 alias code='codium'
+alias gitsu='gitsu --global'
 ####
 
 ## golang ##

@@ -32,7 +32,7 @@ alias ls='exa --icons'
 alias untargz='tar xvzf'
 alias bat='batcat --paging=never -p'
 alias ssh='ssh -o ServerAliveInterval=60'
-alias viddy='viddy --pty --shell fish'
+alias watch='viddy --pty --shell fish'
 alias code='codium'
 ####
 

@@ -11,4 +11,5 @@ Plug 'vim-airline/vim-airline' (https://github.com/itchyny/lightline.vim probarl
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Raimondi/delimitMate'
 Plug 'itchyny/vim-cursorword'
+Plug 'tpope/vim-surround'
 call plug#end()

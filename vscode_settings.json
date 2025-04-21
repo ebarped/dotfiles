@@ -122,4 +122,6 @@
     },
     "sqliteViewer.maxFileSize": 300,
     "editor.cursorSurroundingLines":8,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.renderSideBySide": true
 }

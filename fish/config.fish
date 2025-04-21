@@ -5,6 +5,7 @@ function fish_greeting
 end
 
 set -gx PATH $PATH $HOME/.krew/bin
+set -gx PATH $PATH $HOME/.oci/bin
 set -g theme_nerd_fonts yes
 set -g theme_display_git_default_branch yes
 set -g theme_display_k8s_context yes
@@ -40,6 +41,11 @@ alias clone='git clone'
 alias commit='git commit -m'
 alias push='git push'
 alias pull='git pull'
+alias checkout='git checkout'
+alias dev='git checkout dev'
+alias pre='git checkout pre'
+alias master='git checkout master'
+alias main='git checkout main'
 alias gitsu='gitsu --global'
 ####
 
@@ -51,6 +57,7 @@ alias ssh='ssh -o ServerAliveInterval=60'
 alias watch='viddy --pty --shell fish'
 alias code='codium'
 alias wishlist='wishlist -c ~/.config/wishlist.yml'
+alias xclip='xclip -selection clipboard'
 atuin init fish | source
 ####
 
@@ -73,11 +80,11 @@ alias bye='slacker -message "Hasta mañana!" -groups "#sistemas" && shutdown -h 
 alias github='gituser personal'
 alias gitlab='gituser work'
 
-# gdu disk usage #
-alias gdu= 'gdu --no-delete'
+# disk usage #
+alias gdu='gdu --no-delete'
+alias duf='duf -hide-fs tmpfs,efivarfs,devtmpfs'
 
-
-## AUTOJUMP ##
+## AUTOJUMP ##	
 begin
     set --local AUTOJUMP_PATH /usr/share/autojump/autojump.fish
     if test -e $AUTOJUMP_PATH

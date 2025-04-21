@@ -1,27 +1,55 @@
 {
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Default Dark+",
   "editor.rulers": [80,120],
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#082e05"
   },  
   "editor.tokenColorCustomizations": {
-      "comments": "#158d1b",
-      "keywords": "#bd9400",
+      "comments": "#0aeb15",
+      "keywords": "#dd28ed",
+      "numbers": "#4bcadb",
+      "strings": "#d9c916",
+      "types": "#f03a3a",
       "variables": "#D4D4D4",
-      "strings": "#a988eb",
-      "numbers": "#cf3232",
-      "types": "#b514aa",
-      "functions": "#05d2f2"
+      "functions": "#fc4e30",
+      "textMateRules": [
+        {
+          "scope": [
+            //following will be in italic (=FlottFlott)
+            "comment",
+            "entity.name.type.class", //class names
+            "keyword", //import, export, return…
+            "constant", //String, Number, Boolean…, this, super
+            "storage.modifier", //static keyword
+            "storage.type.class.js", //class keyword
+          ],
+          "settings": {
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            //following will be excluded from italics (VSCode has some defaults for italics)
+            "invalid",
+            "keyword.operator",
+            "constant.numeric.css",
+            "keyword.other.unit.px.css",
+            "constant.numeric.decimal.js",
+            "constant.numeric.json"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
   },
   "explorer.confirmDragAndDrop": false,
-  "editor.selectionClipboard": true, //paste on middle click
+  "editor.selectionClipboard": false, //paste on middle click
   "explorer.confirmDelete": false,
-  "editor.fontSize": 12,
+  "editor.fontSize": 12.5,
   "terminal.integrated.fontSize": 13,
   //"terminal.integrated.rightClickBehavior": "paste", //paste on right click
   "terminal.integrated.copyOnSelection": true,
-  "window.zoomLevel": 1,
   "go.toolsManagement.autoUpdate": true,
   "workbench.startupEditor": "none",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -40,6 +68,58 @@
         "default": true
       },
     ],
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "Lua.telemetry.enable": false
+    "terminal.integrated.enableMultiLinePasteWarning": "auto",
+    "Lua.telemetry.enable": false,
+    "luahelper.format.tab_width": 2,
+    "luahelper.format.indent_width": 2,
+    "luahelper.format.continuation_indent_width": 2,
+    "luahelper.format.chop_down_table": true,
+    "update.showReleaseNotes": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "indentRainbow.excludedLanguages": [
+    ],
+    "indentRainbow.includedLanguages": [
+      "json",
+      "jsonc",
+      "yaml"
+    ],
+    "window.zoomLevel": 1,
+    "editor.stickyScroll.enabled": false,
+    "diffEditor.maxComputationTime": 0,
+    "extensiontotal.apiKeySetting": "xtotal591401df2e534e33a0e39b9816cf50f4",
+    "ldap-explorer.connections": [
+      {
+        "name": "optare AD",
+        "protocol": "ldap",
+        "starttls": "false",
+        "verifycert": "true",
+        "sni": "",
+        "host": "172.130.0.113",
+        "port": "389",
+        "binddn": "CN=AD Connector User,OU=AD Connector,OU=OPTAREGRUPO,DC=optaregrupo,DC=local",
+        "bindpwd": "<PASSS>",
+        "basedn": "DC=optaregrupo,DC=local",
+        "limit": "0",
+        "paged": "true",
+        "timeout": "5000",
+        "bookmarks": []
+      }
+    ],
+    "codeviz.analyticsEnabled": true,
+    "explorer.fileNesting.patterns": {
+      "*.ts": "${capture}.js",
+      "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+      "*.jsx": "${capture}.js",
+      "*.tsx": "${capture}.ts",
+      "tsconfig.json": "tsconfig.*.json",
+      "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+      "*.sqlite": "${capture}.${extname}-*",
+      "*.db": "${capture}.${extname}-*",
+      "*.sqlite3": "${capture}.${extname}-*",
+      "*.db3": "${capture}.${extname}-*",
+      "*.sdb": "${capture}.${extname}-*",
+      "*.s3db": "${capture}.${extname}-*"
+    },
+    "sqliteViewer.maxFileSize": 300,
+    "editor.cursorSurroundingLines":8,
 }

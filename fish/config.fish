@@ -58,6 +58,7 @@ alias watch='viddy --pty --shell fish'
 alias code='codium'
 alias wishlist='wishlist -c ~/.config/wishlist.yml'
 alias xclip='xclip -selection clipboard'
+alias processes='ps -efj'
 atuin init fish | source
 ####
 

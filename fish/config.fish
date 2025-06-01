@@ -50,7 +50,7 @@ alias gitsu='gitsu --global'
 ####
 
 ## common ##
-alias ls='exa --icons' 
+alias ls='exa -g --icons' 
 alias untargz='tar xvzf'
 alias bat='bat --paging=never -p'
 alias ssh='ssh -o ServerAliveInterval=60'

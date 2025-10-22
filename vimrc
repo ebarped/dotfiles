@@ -7,8 +7,8 @@ set shiftwidth=4
 
 " plugins section
 call plug#begin()
-Plug 'vim-airline/vim-airline' 
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'vim-airline/vim-airline' "status bar
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} " multiple plugins
 Plug 'Raimondi/delimitMate'
 Plug 'itchyny/vim-cursorword'
 Plug 'tpope/vim-surround'
